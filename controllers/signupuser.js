@@ -49,7 +49,7 @@ export const signupUser = async (req, res) => {
 
 //     await sendMail(email, 'Verify Your Account', `Your otp is ${otp}`);
 
-    sendToken(res, userOne, 201, 'Your otp is send');
+    sendToken(res, userOne, 201, 'Your otp is send and and your are signUp Successfully');
   } catch (error) {
     res.status(400).json({
       message: `Internal  Error by db which is ====> ${error}`,
