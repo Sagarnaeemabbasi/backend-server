@@ -2,7 +2,7 @@ import user from '../models/user.js';
 import {sendMail} from '../Utils/sendMail.js';
 import {sendToken} from '../Utils/sendToken.js';
 import cloudinary from 'cloudinary';
-import fs from 'fs';
+// import fs from 'fs';
 
 export const signupUser = async (req, res) => {
   try {
@@ -43,7 +43,7 @@ export const signupUser = async (req, res) => {
     };
 
     userOne = await user.create(obj_to_sent);
-    fs.rmSync('./tmp', {recursive: true});
+//     fs.rmSync('./tmp', {recursive: true});
 
     // await sendMail(email, 'Verify Your Account', `Your otp is ${otp}`);
 
