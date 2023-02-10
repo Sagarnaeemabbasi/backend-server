@@ -2,7 +2,11 @@
   "name": "app-backend",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
   "main": "app.js",
+=======
+  "main": "server.js",
+>>>>>>> fa99a7e2a2650be9db41920168758478d04c5fc2
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
