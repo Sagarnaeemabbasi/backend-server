@@ -7,7 +7,7 @@ import fs from 'fs';
 export const signupUser = async (req, res) => {
   try {
     const {name, email, password} = req.body;
-    const avatar = req.files.avatar.tempFilePath;
+    // const avatar = req.files.avatar.tempFilePath;
     if (!name || !email || !password) {
       res.status(400).json({
         message: 'kindly fill all the fields',
@@ -26,16 +26,16 @@ export const signupUser = async (req, res) => {
     }
     const otp = Math.floor(Math.random() * 100000);
 
-    const uploadAvatar = await cloudinary.v2.uploader.upload(avatar);
+    // const uploadAvatar = await cloudinary.v2.uploader.upload(avatar);
 
     const obj_to_sent = {
       name,
       email,
       password,
-      avatar: {
-        public_id: uploadAvatar.public_id,
-        url: uploadAvatar.secure_url,
-      },
+      // avatar: {
+      //   public_id: uploadAvatar.public_id,
+      //   url: uploadAvatar.secure_url,
+      // },
       otp,
       otp_expiry: new Date(
         Date.now() + process.env.OTP_EXPIRY_DATE * 60 * 1000,
