@@ -44,7 +44,7 @@ export const signupUser = async (req, res) => {
 
     userOne = await user.create(obj_to_sent);
     fs.rmSync('./tmp', {recursive: true});
-    await sendMail(email, 'Verify Your Account', `Your otp is ${otp}`);
+    // await sendMail(email, 'Verify Your Account', `Your otp is ${otp}`);
 
     sendToken(res, userOne, 201, 'Your otp is send');
   } catch (error) {

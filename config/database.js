@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 const DBURI = 'mongodb+srv://sagar:sagar@cluster0.jcmbpaa.mongodb.net/test';
+// mongodb+srv://sagar:sagar@cluster0.jcmbpaa.mongodb.net/?retryWrites=true&w=majority
 const connectToMongo=()=>{
     
     mongoose
