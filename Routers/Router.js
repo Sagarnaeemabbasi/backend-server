@@ -30,7 +30,7 @@ router.route('/addTask').post(IsAuthenticated, addTaks);
 // Updates Routes
 
 router.route('/updateprofile').put(IsAuthenticated, updateProfile);
-router.route('/getprofile').put(IsAuthenticated, getMyProfile);
+router.route('/getprofile').get(IsAuthenticated, getMyProfile);
 
 router.route('/updatepassword').put(IsAuthenticated, updatePassword);
 router.route('/forgotpassword').post(forgotPassword);
