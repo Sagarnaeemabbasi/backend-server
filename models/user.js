@@ -44,12 +44,7 @@ const userSchema = new mongoose.Schema(
     otp_expiry: Date,
     resetPasswordOtp: Number,
     resetPasswordOtpExpiry: Date,
-  },
-  {
-    // capped: {size: 1024},
-    bufferCommands: false,
-    autoCreate: false, // disable `autoCreate` since `bufferCommands` is false
-  },
+  }
 );
 
 userSchema.pre('save', async function (next) {
