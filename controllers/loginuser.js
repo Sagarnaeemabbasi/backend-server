@@ -70,7 +70,7 @@ const loginuser = async (req, res) => {
       });
     }
 
-    sendToken(res, userOne, 200, 'Login Successfully');
+    sendToken(res, userOne, 200, 'finally');
   } catch (error) {
     res.status(400).json({
       message: ` ${error}`,
