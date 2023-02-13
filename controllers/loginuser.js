@@ -73,7 +73,7 @@ const loginuser = async (req, res) => {
     sendToken(res, userOne, 200, 'Login Successfully');
   } catch (error) {
     res.status(400).json({
-      message: `Internal  Error by db which is ====> ${error}`,
+      message: ` ${error}`,
       status: false,
     });
   }
