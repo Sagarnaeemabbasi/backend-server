@@ -79,9 +79,9 @@ const loginuser = async (req, res) => {
   }
 };
 
-const getMyProfile = (req, res) => {
+const getMyProfile =async (req, res) => {
   try {
-    let userOne = user.findById(req.user._id);
+    let userOne =await user.findById(req.user._id);
     if (userOne) {
       sendToken(res, userOne, 200, `welcome back ${userOne.name}`);
     }
